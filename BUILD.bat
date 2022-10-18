@@ -22,3 +22,4 @@ rem "%VSInstallDir%\common7\tools\vsdevcmd.bat"
 call "%VSInstallDir%\common7\tools\vsmsbuildcmd.bat"
 
 msbuild super_app.sln
+echo Done
