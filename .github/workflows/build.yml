@@ -9,6 +9,7 @@ permissions:
   contents: read
 
 env:
+  USERPROFILE: .
   BUILD_CONFIGURATION: Release
   MACHINE: x64
 
@@ -22,7 +23,7 @@ jobs:
       - name: Get CPM
         uses: engineerd/configurator@v0.0.8
         with:
-          name: .\cpm.exe
+          name: cpm.exe
           url: https://github.com/neacsum/cpm/releases/latest/download/cpm.exe
       
       - name: Build
