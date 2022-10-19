@@ -11,7 +11,7 @@ permissions:
 env:
   # This is the destination directory for CPM tool
   USERPROFILE: .
-  DEV_ROOT: ${{env.GITHUB_WORKSPACE}}
+  
   
 jobs:
   build:
@@ -28,5 +28,5 @@ jobs:
         run: git clone https://github.com/neacsum/example_super_app.git .\super_app
 
       - name: Build
-        run: cpm -v super_app
+        run: cpm -v -r ${{env.GITHUB_WORKSPACE}} super_app
         
