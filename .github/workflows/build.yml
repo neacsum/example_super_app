@@ -11,15 +11,14 @@ permissions:
 env:
   # This is the destination directory for CPM tool
   USERPROFILE: .
-  
+  DEV_ROOT: root
   
 jobs:
   build:
     runs-on: windows-latest
     
     steps:
-      - run: echo %CD%
-      - run: echo ${{env.USERPROFILE}}
+      - run: mkdir ${{env.DEV_ROOT}}
       
       - name: Get CPM
         uses: engineerd/configurator@v0.0.8
@@ -28,8 +27,8 @@ jobs:
           url: https://github.com/neacsum/cpm/releases/latest/download/cpm.exe
       
       - name: Clone
-        run: git clone https://github.com/neacsum/example_super_app.git .\super_app
+        run: git clone https://github.com/neacsum/example_super_app.git ${{env.DEV_ROOT}}\super_app
 
       - name: Build
-        run: cpm -v -r ${{env.USERPROFILE}} super_app
+        run: cpm -v -r ${{env.DEV_ROOT}} ${{env.DEV_ROOT}}\super_app
         
