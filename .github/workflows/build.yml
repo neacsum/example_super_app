@@ -11,7 +11,7 @@ permissions:
 env:
   # This is the destination directory for CPM tool
   USERPROFILE: .
-  DEV_ROOT: $GITHUB_WORKSPACE
+  DEV_ROOT: ${{env.GITHUB_WORKSPACE}}
   
 jobs:
   build:
