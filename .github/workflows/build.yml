@@ -11,11 +11,12 @@ permissions:
 env:
   # This is the destination directory for CPM tool
   USERPROFILE: .
+  DEV_ROOT: $GITHUB_WORKSPACE
   
 jobs:
   build:
     runs-on: windows-latest
-
+    
     steps:
       - name: Get CPM
         uses: engineerd/configurator@v0.0.8
@@ -26,7 +27,6 @@ jobs:
       - name: Clone
         run: git clone https://github.com/neacsum/example_super_app.git .\super_app
 
-      - run: set DEV_ROOT=%CD%        
       - name: Build
         run: cpm -v super_app
         
