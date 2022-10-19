@@ -18,7 +18,9 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - run: echo %USERPROFILE%
+      - run: echo %CD%
+      - run: echo ${{env.USERPROFILE}}
+      
       - name: Get CPM
         uses: engineerd/configurator@v0.0.8
         with:
@@ -29,5 +31,5 @@ jobs:
         run: git clone https://github.com/neacsum/example_super_app.git .\super_app
 
       - name: Build
-        run: cpm -v -r %USERPROFILE% super_app
+        run: cpm -v -r ${{env.USERPROFILE}} super_app
         
