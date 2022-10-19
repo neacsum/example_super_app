@@ -25,8 +25,8 @@ jobs:
       
       - name: Clone
         run: git clone https://github.com/neacsum/example_super_app.git .\super_app
-        
+
+      - run: set DEV_ROOT=%CD%        
       - name: Build
-        run: set DEV_ROOT=%CD%        
         run: cpm -v super_app
         
