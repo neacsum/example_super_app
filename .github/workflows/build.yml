@@ -29,3 +29,5 @@ jobs:
       - name: Build
         run: cpm -v -r . super_app
         
+      - name: Run app
+        run: super_app\build\x64\debug\super_app.exe
