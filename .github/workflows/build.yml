@@ -9,11 +9,9 @@ permissions:
   contents: read
 
 env:
+  # This is the destination directory for CPM tool
   USERPROFILE: .
-  DEV_ROOT: .
-  BUILD_CONFIGURATION: Release
-  MACHINE: x64
-
+  
 jobs:
   build:
     runs-on: windows-latest
@@ -29,5 +27,6 @@ jobs:
         run: git clone https://github.com/neacsum/example_super_app.git .\super_app
         
       - name: Build
-        run: cpm super_app
+        run: set DEV_ROOT=%CD%        
+        run: cpm -v super_app
         
