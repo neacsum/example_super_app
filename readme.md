@@ -4,7 +4,7 @@ This is a sample application that can be built using  [CPM - A C/C++ Package Man
 ## Usage ##
 To see how the whole package management system works, follow these steps:
 - Download the [CPM utility](https://github.com/neacsum/cpm/releases/latest/download/cpm.exe) and place it somewhere on your path.
-- Create an empty directory and set the `DEV_ROOT` environment variable to point to it.:
+- Create an empty directory and set the `DEV_ROOT` environment variable to point to it:
   ````
   set DEV_ROOT=c:\test
   ````  
