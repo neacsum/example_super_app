@@ -1,17 +1,20 @@
 {
-    "name": "super_app",
-    "git": "https://github.com/neacsum/example_super_app.git",
+    "name":  "super_app",
+    "https": "https://github.com/neacsum/example_super_app.git",
+    "git":   "git@github.com:neacsum/example_super_app.git",
     "build": [
         {"cmd": "build.bat"}
     ],
     "depends": [
         {
             "name": "cool_A",
-            "git": "https://github.com/neacsum/example_cool_A.git"
+            "https": "https://github.com/neacsum/example_cool_A.git",
+            "git": "git@github.com:neacsum/example_cool_A.git"
         },
         {
             "name": "cool_B",
-            "git": "https://github.com/neacsum/example_cool_B.git"
+            "https": "https://github.com/neacsum/example_cool_B.git",
+            "git": "git@github.com:neacsum/example_cool_B.git"
         }
     ]
 }
