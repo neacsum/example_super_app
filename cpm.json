@@ -3,13 +3,20 @@
     "https": "https://github.com/neacsum/example_super_app.git",
     "git":   "git@github.com:neacsum/example_super_app.git",
     "build": [
-        {"cmd": "build.bat"}
+        {"os": "windows", "cmd": "cmake", "args": ["--workflow", "--preset=x64"]},
+        {"os": "windows", "cmd": "cmake", "args": ["--workflow", "--preset=x86"]},
+        {"os": "linux", "cmd": "cmake", "args": ["--workflow", "--preset=gcc"]}
     ],
     "depends": [
         {
             "name": "cool_A",
             "https": "https://github.com/neacsum/example_cool_A.git",
-            "git": "git@github.com:neacsum/example_cool_A.git"
+            "git": "git@github.com:neacsum/example_cool_A.git",
+            
+            "_comment": "Sample post build command",
+            "post": [
+              {"cmd": "echo", "args": ["$DEV_ROOT", "current directory is %CD%"]}
+            ]
         },
         {
             "name": "cool_B",
