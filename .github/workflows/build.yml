@@ -23,4 +23,4 @@ jobs:
         run: cpm -v --proto https -u https://github.com/neacsum/example_super_app -r $HOME super_app
         
       - name: Run app
-        run: $HOME\super_app\build\x86\bin\Release\super_app.exe
+        run: super_app\build\x86\bin\Release\super_app.exe
