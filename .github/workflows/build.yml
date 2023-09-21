@@ -23,11 +23,8 @@ jobs:
           name: cpm.exe
           url: https://github.com/neacsum/cpm/releases/latest/download/cpm.exe
       
-      - name: Clone
-        run: git clone https://github.com/neacsum/example_super_app.git .\super_app
-
       - name: Build
-        run: cpm -v --proto https -r . super_app
+        run: cpm -v --proto https -u https://github.com/neacsum/example_super_app -r . super_app
         
       - name: Run app
         run: .\super_app\build\app\x64\Debug\super_app.exe
