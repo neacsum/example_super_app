@@ -10,7 +10,7 @@ permissions:
 
 env:
   # This is the destination directory for CPM tool
-  USERPROFILE: .
+  USERPROFILE: $HOME
   
 jobs:
   build:
@@ -27,4 +27,4 @@ jobs:
         run: cpm -v --proto https -u https://github.com/neacsum/example_super_app -r . super_app
         
       - name: Run app
-        run: .\super_app\build\app\x64\Debug\super_app.exe
+        run: .\super_app\build\x64\bin\Debug\super_app.exe
