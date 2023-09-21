@@ -8,10 +8,6 @@ on:
 permissions:
   contents: read
 
-# env:
-  # This is the destination directory for CPM tool
-  # USERPROFILE: $HOME
-  
 jobs:
   build:
     runs-on: windows-latest
@@ -24,7 +20,7 @@ jobs:
           url: https://github.com/neacsum/cpm/releases/latest/download/cpm.exe
       
       - name: Build
-        run: cpm -v --proto https -u https://github.com/neacsum/example_super_app -r . super_app
+        run: cpm -v --proto https -u https://github.com/neacsum/example_super_app -r $HOME super_app
         
       - name: Run app
-        run: .\super_app\build\x64\bin\Debug\super_app.exe
+        run: $HOME\super_app\build\x86\bin\Release\super_app.exe
