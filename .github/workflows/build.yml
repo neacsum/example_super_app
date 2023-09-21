@@ -8,9 +8,9 @@ on:
 permissions:
   contents: read
 
-env:
+# env:
   # This is the destination directory for CPM tool
-  USERPROFILE: $HOME
+  # USERPROFILE: $HOME
   
 jobs:
   build:
