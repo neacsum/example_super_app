@@ -28,7 +28,7 @@ add_subdirectory (src)
 
 # Set location of main program (./bin/<Platform>/<Configuration>)
 set_target_properties (${PROJECT_NAME} PROPERTIES
-	RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/$<CONFIG>
+	RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>
 )
 
 # Add dependent libraries
