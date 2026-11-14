@@ -5,4 +5,4 @@ rem  Environment variable DEV_ROOT points to the root of development tree.
 rem
 
 call setup.bat
-msbuild super_app.sln
+msbuild super_app.slnx
