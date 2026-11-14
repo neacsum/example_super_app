@@ -14,13 +14,13 @@ jobs:
     
     steps:      
       - name: Get CPM
-        uses: engineerd/configurator@v0.0.10
+        uses: neacsum/configurator@v0.0.11
         with:
           name: cpm.exe
           url: https://github.com/neacsum/cpm/releases/latest/download/cpm.exe
       
       - name: Build
-        run: cpm -v --proto https -u https://github.com/neacsum/example_super_app -r $HOME super_app
+        run: cpm -v -u https://github.com/neacsum/example_super_app
         
       - name: Run app
         run: |
