@@ -1,6 +1,6 @@
 {
     "name":  "super_app",
-    "uri":   "git@github.com:neacsum/example_super_app.git",
+    "uri":   "https://github.com/neacsum/example_super_app.git",
     "build": [
         {"os": "windows", "cmd": "cmake", "args": ["--workflow", "--preset=x64"]},
         {"os": "windows", "cmd": "cmake", "args": ["--workflow", "--preset=x86"]},
@@ -9,7 +9,7 @@
     "depends": [
         {
             "name": "cool_A",
-            "uri": "git@github.com:neacsum/example_cool_A.git",
+            "uri": "https://github.com/neacsum/example_cool_A.git",
             
             "_comment": "Sample post build command",
             "post": [
