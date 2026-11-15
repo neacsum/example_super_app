@@ -9,19 +9,45 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build-win:
     runs-on: windows-latest
-    
-    steps:      
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          path: super_app
+       
       - name: Get CPM
         uses: neacsum/configurator@v0.0.11
         with:
           name: cpm.exe
           url: https://github.com/neacsum/cpm/releases/latest/download/cpm.exe
-      
+     
       - name: Build
-        run: cpm -v -u https://github.com/neacsum/example_super_app
-        
+        run: cpm -v super_app
+       
       - name: Run app
         shell: cmd
         run: .\super_app\build\x64\Release\super_app.exe
+
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          path: super_app
+
+      - name: Get CPM
+        uses: neacsum/configurator@v0.0.11
+        with:
+          name: cpm
+          url: https://github.com/neacsum/cpm/releases/latest/download/cpm
+
+      - name: Build
+        run: cpm -v super_app
+
+      - name: Run app
+        run: ./super_app/super_app
