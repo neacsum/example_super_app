@@ -24,5 +24,5 @@ jobs:
         
       - name: Run app
         run: |
-          cd {{github.workspace}}
+          cd {{ github.workspace }}
           .\super_app\build\x64\Release\super_app.exe
