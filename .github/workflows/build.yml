@@ -23,6 +23,5 @@ jobs:
         run: cpm -v -u https://github.com/neacsum/example_super_app
         
       - name: Run app
-        run: |
-          cd $env:GIT_WORKSPACE
-          .\super_app\build\x64\Release\super_app.exe
+          shell: cmd
+          run: .\super_app\build\x64\Release\super_app.exe
