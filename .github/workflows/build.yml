@@ -25,4 +25,4 @@ jobs:
       - name: Run app
         run: |
           cd $HOME
-          .\super_app\build\x86\bin\Release\super_app.exe
+          .\super_app\build\x64\Release\super_app.exe
