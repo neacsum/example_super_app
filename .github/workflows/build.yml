@@ -50,6 +50,5 @@ jobs:
         run: cpm -v super_app
 
       - name: Run app
-        run: |
-          ls
-          ./super_app/build/gcc/super_app
+        run: 
+          super_app/build/gcc/super_app
