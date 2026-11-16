@@ -1,6 +1,6 @@
 {
     "name":  "super_app",
-    "uri":   "https://github.com/neacsum/example_super_app.git",
+    "origin":   "https://github.com/neacsum/example_super_app.git",
     "build": [
         {"os": "windows", "cmd": "cmake", "args": ["--workflow", "--preset=x64"]},
         {"os": "windows", "cmd": "cmake", "args": ["--workflow", "--preset=x86"]},
